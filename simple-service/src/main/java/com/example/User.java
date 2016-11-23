@@ -3,10 +3,16 @@
  */
 package com.example;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+import org.codehaus.jackson.annotate.JsonAutoDetect;
+import org.codehaus.jackson.map.annotate.JsonRootName;
+
 /**
  * @author Ire
  *
  */
+@XmlRootElement
 public class User {
 	
 	private Integer id = null;
