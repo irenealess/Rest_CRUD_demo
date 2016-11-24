@@ -11,8 +11,7 @@ public class DBConector {
 	private static String connection = null;
 	private static Connection conn = null; 
 	
-	public static boolean driver (){
-		
+	public static boolean driver (){		
 		try {
 			
 		    Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -25,7 +24,9 @@ public class DBConector {
 			}
 	}
 	
-  //public static Connection connection(){
+   /*
+    * Creates database connection
+    */
 	public static Connection connection(){		
 		try{
 			conn = DriverManager.getConnection("jdbc:mysql://localhost/test?"+ "user=root&password=");		 
@@ -35,6 +36,9 @@ public class DBConector {
 		return conn;		
 	}
 	
+   /*
+	* Creates USER table on test database
+	*/
 	public static boolean createTable(){
 		Statement stmt = null;
 		try{
